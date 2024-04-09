@@ -12,8 +12,8 @@ def choice():
     while True:
         try:
             characters = int(input("How many total characters would you like in your password? - ")) 
-            nr_symbols = int(input(f"How many symbols would you like? - "))
-            nr_numbers = int(input(f"How many numbers would you like? - "))
+            nr_symbols = int(input("How many symbols would you like? - "))
+            nr_numbers = int(input("How many numbers would you like? - "))
             if characters < nr_symbols + nr_numbers:
                 print("The number of total characters has to be higher than sum of the number of symbols and numbers.")
                 continue
