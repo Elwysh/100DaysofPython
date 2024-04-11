@@ -18,7 +18,7 @@ def player_word():
 def word_choice():
     print("Welcome to Hangman!\n")
     while True:
-        choice = input("Would you like to 1 - get a random word or 2 - put a custom word? (enter '1' or '2') - ")
+        choice = input("Would you like to 1 - get a random word or 2 - put a custom word? (enter '1' or '2') - ").lower()
         if choice == "1":
             print("You have chosen a random word. Please enjoy the game :)")
             word = bank()
