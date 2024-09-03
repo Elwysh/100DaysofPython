@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Hello World!</title>
+  <link href="{{ url_for('static', filename='style.css') }}" rel="stylesheet" />
+</head>
+<body>
+  <h1>Hey {{ name.title() }},</h1>
+  <h2>I think you are {{ gender }},</h2>
+  <h3>And maybe {{ age }} old.</h3>
+</body>
+<footer>
+  <p>copyright footer with current year {{ year }}</p>
+</footer>
+</html>
+
+<!-- template shows jinja usage with curly brackets -->
