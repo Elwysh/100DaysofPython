@@ -1,0 +1,41 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Bootstrap</title>
+  <!-- link href below added from getbootstrap website, link to their CDN -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.4/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-DQvkBjpPgn7RC31MCQoOeC9TI2kdqa4+BSgNMNj8v77fdC77Kj5zpWFTJaaAoMbC" crossorigin="anonymous">
+  <!-- own local css -->
+  <link href="static/style.css" rel="stylesheet" />
+  <!-- inline styling -->
+  <style>
+    .flex-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="flex-container">
+    <!-- added from bootstrap docs -->
+    <div class="card" style="width: 18rem;">
+      <img src="static/flower.jpg" class="card-img-top" alt="flower image">
+      <div class="card-body">
+        <h5 class="card-title">Card title</h5>
+        <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+        <a href="#" class="btn btn-primary">Go somewhere</a>
+      </div>
+    </div>
+  </div>
+</body>
+
+</html>
+
+<!-- you can use both the external framework (bootstrap) for the css and also a css file in yourproject, 
+ but be sure to reference it bellow the external one, so that you can overwrite the style after,
+ or you can add inline style as in the example above -->
