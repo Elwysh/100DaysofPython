@@ -26,7 +26,7 @@ def guess(name):
     else:
         return "No response from related API."
 
-@app.route("/blog")
+@app.route("/blog/<num>")
 def blog(num):
     return f"Variable passed through is {num}"
 

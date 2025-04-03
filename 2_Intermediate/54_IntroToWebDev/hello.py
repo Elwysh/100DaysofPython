@@ -10,7 +10,7 @@ if __name__ == "__main__":
     app.run()
 
 # notes
-# Flask uses decoraters (line 5)
+# Flask uses decorators (line 5)
 # the "/" determines the home "folder"/page of the website
 # returns the text of the function bellow
 # run this either in the directory with "flask --app hello run" 
