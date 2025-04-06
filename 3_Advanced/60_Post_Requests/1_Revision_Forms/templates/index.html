@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Hello World!</title>
+  <link href="static/style.css" rel="stylesheet" />
+</head>
+<body>
+  <h1>Hello Moon!</h1>
+  <form action="{{ url_for('login') }}" method="post">
+    <label for="name">Name</label>
+    <input type="text" placeholder="name" name="username">
+    <label for="password">Password</label>
+    <input type="text" placeholder="password" name="password">
+    <button type="submit">Ok</button>
+  </form>
+</body>
+</html>
