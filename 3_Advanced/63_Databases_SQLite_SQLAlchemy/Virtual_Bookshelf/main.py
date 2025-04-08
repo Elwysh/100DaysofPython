@@ -52,9 +52,8 @@ bootstrap = Bootstrap5(app)
 
 @app.route('/')
 def index():
-    with app.app_context():
-        result = db.session.execute(db.select(Book).order_by(Book.title))
-        all_books = result.scalars().all()
+    result = db.session.execute(db.select(Book).order_by(Book.title))
+    all_books = result.scalars().all()
     return render_template("index.html", all_books=all_books)
 
 
@@ -62,14 +61,13 @@ def index():
 def add():
     form = MyForm()
     if form.validate_on_submit():
-        with app.app_context():
-            new_book = Book(
-                title=request.form['title'], 
-                author=request.form['author'], 
-                rating=request.form['rating']
-                )
-            db.session.add(new_book)
-            db.session.commit()
+        new_book = Book(
+            title=request.form['title'], 
+            author=request.form['author'], 
+            rating=request.form['rating']
+            )
+        db.session.add(new_book)
+        db.session.commit()
         return redirect(url_for('index'))
     return render_template("add.html", form=form)
 
@@ -79,10 +77,9 @@ def edit():
     bookId = request.args.get('bookId')
     print(bookId)
     if form.validate_on_submit():
-        with app.app_context():
-            book_to_update = db.session.execute(db.select(Book).where(Book.id == bookId)).scalar()
-            book_to_update.rating = request.form['rating']
-            db.session.commit() 
+        book_to_update = db.session.execute(db.select(Book).where(Book.id == bookId)).scalar()
+        book_to_update.rating = request.form['rating']
+        db.session.commit() 
         return redirect(url_for('index'))
     with app.app_context():
         book = db.session.execute(db.select(Book).where(Book.id == bookId)).scalar()
